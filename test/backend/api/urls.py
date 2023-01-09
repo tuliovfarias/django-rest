@@ -5,7 +5,7 @@ from .import views
 from products.views import ProductViewSet
 
 router = routers.DefaultRouter()
-router.register(r'products', ProductViewSet)
+router.register(r'products', ProductViewSet) # "products": "http://localhost:8000/api/products/"
 
 
 urlpatterns = [

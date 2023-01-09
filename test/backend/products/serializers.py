@@ -9,6 +9,7 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = (
+            'id',
             'title',
             'content',
             'price',
@@ -16,6 +17,9 @@ class ProductSerializer(serializers.ModelSerializer):
             'my_discount'
         )
     
-    def get_my_discount(self, obj):
-        return obj.get_discount()
+    def get_my_discount(self, obj : Product):
+        try:
+            return obj.get_discount()
+        except:
+            return None
 
