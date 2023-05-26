@@ -16,7 +16,8 @@ python manage.py migrate
 python manage.py migrate --run-syncdb
 
 #add app:
-'rest_framework.urls'
+'rest_framework'
+'api'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
